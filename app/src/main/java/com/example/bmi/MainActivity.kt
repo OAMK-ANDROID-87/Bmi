@@ -45,7 +45,7 @@ fun Bmi(modifier: Modifier = Modifier) {
     val weight = weightInput.toIntOrNull() ?: 0
     val bmi = if (weight > 0 && height > 0) {
         DecimalFormat("0.00").format(weight / (height * height))
-    } else ""
+    } else "0.0f"
 
     Column(modifier = modifier.padding(16.dp)) {
         Text(
